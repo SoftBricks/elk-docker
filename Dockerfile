@@ -8,7 +8,7 @@
 # docker run -p 5601:5601 -p 9200:9200 -p 5000:5000 -it --name elk <repo-user>/elk
 
 FROM phusion/baseimage
-MAINTAINER Sebastien Pujadas http://pujadas.net
+MAINTAINER Philipp Sporrer
 ENV REFRESHED_AT 2015-11-05
 
 ###############################################################################
@@ -52,7 +52,7 @@ RUN sed -i -e 's#^LS_HOME=$#LS_HOME='$LOGSTASH_HOME'#' /etc/init.d/logstash \
 ### install Kibana
 
 ENV KIBANA_HOME /opt/kibana
-ENV KIBANA_PACKAGE kibana-4.1.2-linux-x64.tar.gz
+ENV KIBANA_PACKAGE kibana-4.2.0-linux-x64.tar.gz
 
 RUN mkdir ${KIBANA_HOME} \
  && curl -O https://download.elasticsearch.org/kibana/kibana/${KIBANA_PACKAGE} \
