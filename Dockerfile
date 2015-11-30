@@ -21,7 +21,7 @@ RUN apt-get update -qq \
  && apt-get install -qqy curl
 
 RUN curl http://packages.elasticsearch.org/GPG-KEY-elasticsearch | apt-key add -
-RUN echo deb http://packages.elasticsearch.org/elasticsearch/1.7/debian stable main > /etc/apt/sources.list.d/elasticsearch.list
+RUN echo deb http://packages.elasticsearch.org/elasticsearch/2.0/debian stable main > /etc/apt/sources.list.d/elasticsearch.list
 
 RUN apt-get update -qq \
  && apt-get install -qqy \
